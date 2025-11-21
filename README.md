@@ -62,7 +62,7 @@ Remove from wwwroot\service_worker.published.js integrity by changing
 ```
 
 ```
-.map(asset => new Request(asset.url);
+.map(asset => new Request(asset.url));
 ```
 Publish app with:
 ```
@@ -73,6 +73,6 @@ Copy files from bin\Release\net10.0\publish\wwwroot into GitHub repository docs 
 <base href="https://jussivirkkala.github.io/Blazor-EDF/" />
 ``` 
 
-Use \docs option in GitHub pages settings. You need empty .nojekyll file there.
+Use \docs option in GitHub pages settings. You need empty .nojekyll in docs folder.
 
 End
