@@ -1,6 +1,6 @@
 # EDF
 
-v2024-12-03: .NET9 https://blazor.net  WebAssembly (WASM) app to read EDF https://www.edfplus.info and BDF header information.
+v2024-11-21: .NET10 https://blazor.net  WebAssembly (WASM) app to read EDF https://www.edfplus.info and BDF header information.
  Progressive web app (PWA) for offline use in desktop or mobile browser. File is analyzed locally.
 App is hosted at https://jussivirkkala.github.io/Blazor-EDF/ and
 source code at https://github.com/jussivirkkala/Blazor-EDF</a>. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND...
@@ -19,7 +19,7 @@ You can copy header to clipboard or download as ascii [PN00-1.edf.txt](PN00-1.ed
 
 # Code
 
-There are minimal changes to default Blazor empty template. You can use .NET9 SDK https://dotnet.microsoft.com/ to build and run app: 
+There are minimal changes to default Blazor empty template. You can use .NET10 SDK https://dotnet.microsoft.com/ to build and run app: 
 
 ```
 dotnet watch run
@@ -64,7 +64,7 @@ Publish app with:
 ```
 dotnet publish -c release
 ```
-Copy files from bin\Release\net9.0\publish\wwwroot into docs folder. Change correct folder in docs\index.html e.g.
+Copy files from bin\Release\net10.0\publish\wwwroot into GitHub repository docs folder. Change correct folder in docs\index.html e.g.
 ```
 <base href="https://jussivirkkala.github.io/Blazor-EDF/" />
 ``` 
