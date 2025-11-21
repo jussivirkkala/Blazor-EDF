@@ -55,10 +55,14 @@ body {
 ...
 ```
 
-Remove from wwwroot\service_worker.published.js integrity.
+Remove from wwwroot\service_worker.published.js integrity by changing
 
 ```
 .map(asset => new Request(asset.url, { integrity: asset.hash, cache: 'no-cache' }));
+```
+
+```
+.map(asset => new Request(asset.url);
 ```
 Publish app with:
 ```
