@@ -1,6 +1,6 @@
 # EDF
 
-v2024-11-21: .NET10 https://blazor.net  WebAssembly (WASM) app to read EDF https://www.edfplus.info and BDF header information.
+v2025-11-21: .NET10 https://blazor.net  WebAssembly (WASM) app to read EDF https://www.edfplus.info and BDF header information.
  Progressive web app (PWA) for offline use in desktop or mobile browser. File is analyzed locally.
 App is hosted at https://jussivirkkala.github.io/Blazor-EDF/ and
 source code at https://github.com/jussivirkkala/Blazor-EDF</a>. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND...
@@ -38,6 +38,12 @@ Code and UI is in [Pages/Home.razor](Pages/Home.razor). Additional script e.g. s
 <script src="_framework/blazor.webassembly.js"></script>
 ...
 ```
+In .csproj compression is disabled
+```
+  <PropertyGroup>
+    <CompressionEnabled>false</CompressionEnabled>
+```
+
 In [wwwroot/css/app.css](wwwroot/css/app.css) for mobile layout
 
 ```
@@ -55,12 +61,12 @@ body {
 ...
 ```
 
-Remove from wwwroot\service_worker.published.js integrity by changing
+Remove from wwwroot\service_worker.published.js integrity by changing. 
 
 ```
 .map(asset => new Request(asset.url, { integrity: asset.hash, cache: 'no-cache' }));
 ```
-
+to. See discussion about this in https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly/bundle-caching-and-integrity-check-failures?view=aspnetcore-10.0.
 ```
 .map(asset => new Request(asset.url));
 ```
@@ -72,7 +78,6 @@ Copy files from bin\Release\net10.0\publish\wwwroot into GitHub repository docs 
 ```
 <base href="https://jussivirkkala.github.io/Blazor-EDF/" />
 ``` 
-
 Use \docs option in GitHub pages settings. You need empty .nojekyll in docs folder.
 
 End
